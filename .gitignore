@@ -1,0 +1,13 @@
+# Temp files
+\#*\#
+*~
+.#*
+
+config.el
+eln-cache/
+auto-save-list/
+recentf
+# Elpa and Elpaca packages
+elpa*/
+# Emacs-W3
+url/
