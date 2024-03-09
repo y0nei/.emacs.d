@@ -1,0 +1,31 @@
+#+TITLE: Yonei's Emacs config
+#+AUTHOR: Yonei
+#+OPTIONS: ^:{} toc:nil
+#+HTML: <a href="https://www.gnu.org/software/emacs/"><img alt="GNU Emacs" src="https://img.shields.io/badge/emacs-29.1-8A2BF2?logo=gnuemacs&logoColor=white"/></a>
+#+HTML: <a href="https://github.com/progfolio/elpaca"><img alt="Package Manager" src="https://img.shields.io/badge/package_manager-elpaca-e1c699"/></a>
+#+HTML: <a href="https://en.wikipedia.org/wiki/Linux"><img alt="Linux" src="https://img.shields.io/badge/linux-FCC624?logo=linux&logoColor=black"/></a>
+
+* Introduction
+*NOTE:* This configuration requires Emacs 29.1 or better
+
+** Why Emacs?
+After a long time of being a NeoVim user, I started craving a breath of fresh air. In October of 2023 Emacs piqued my interest^{[citation needed]}, learning about it's superior extensibility and the idea of using a single tool as a replacement for numerous applications serving one purpose (email, note taking, IDE, PDF reader) really spoke to me.
+
+** Why vanilla?
+I used [[https://github.com/doomemacs/doomemacs][Doom Emacs]] for some time. While it did a good job at "working out of the box", it's complexities blocked me from gaining a further understanding of Emacs and Elisp. That pushed me to take a shot at writing [[https://codeberg.org/y0nei/dotfiles/src/commit/fe80b395f7c4ae34311ab193061850aa466ea631/.config/emacs][my own literate config]].
+
+** Why not literate?
+Having your configuration written in =org-mode= has many benefits and drawbacks. I like the convenience of using a literate Org config. However, I consider using a non-literate style more suitable for the purpose of configuring Emacs.
+Here are some advantages of non-literate setups:
+- Avoid Org version mismatch, often caused by =org-babel-load-file= loading a built-in version of Org, which causes issues when trying to load a more recent version later.
+- Shorter load times thanks to not needing to load =org-mode= when you generate, or want to edit your configuration.
+- Better and more verbose debugging when problems arise.
+- No need to =C-c '= a src block just to get nice features (completion, linting, jump to definition etc.) while editing.
+- Keeping a configuration separated into modules (e.g. separate for keybindings, or for a specific programming language) tends to be easier to extend, manage and version control than jumping around a single monolithic configuration file.
+[[https://www.colinmclear.net/posts/emacs-configuration/][Here]] is a nice article covering this topic more in depth.
+
+* Acknowledgements
+- [[https://github.com/A7R7/EmaxBound][EmaxBound]]: Cool readme badges
+- [[https://gitlab.com/dwt1/configuring-emacs][Derek Taylor's "Configuring Emacs" series]]: Helped me write my first configuration
+- [[https://sr.ht/~ashton314/emacs-bedrock/][Emacs Bedrock]]: Inspired me to take a shot at writing this configuration
+- [[https://www.youtube.com/@SystemCrafters][System Crafters]], [[https://www.youtube.com/@GavinFreeborn][Gavin Freeborn]], [[https://www.youtube.com/@protesilaos][Protesilaos Stavrou]], [[https://www.youtube.com/@TimothyUnkert][Timothy Unkert]]/[[https://www.youtube.com/@timunkertnet][Tim Unkert]], [[https://www.youtube.com/@goparism][Goparism]], [[https://www.youtube.com/@emacselements][Emacs Elements]], [[https://www.youtube.com/@JakeBox0][Jake B]]: Helped me understand Emacs and Elisp
