@@ -35,4 +35,10 @@
 (when (file-exists-p custom-file)
   (load custom-file nil t))
 
+;;; Diagnostics
+;; Override startup minibuffer advertisement with something usefull
+(defun display-startup-echo-area-message ()
+  (message (format "Emacs %s loaded from %s in %s"
+            emacs-version user-emacs-directory (emacs-init-time))))
+
 ;;; init.el ends here
