@@ -3,7 +3,7 @@
 *~
 .#*
 
-config.el
+custom.el
 eln-cache/
 auto-save-list/
 recentf
