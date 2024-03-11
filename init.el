@@ -59,4 +59,10 @@
 ;; FIXME: Temporarely set theme here
 (load-theme 'wombat t)
 
+;;; Load libraries
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
+;; Packages and configuration
+(require 'init-elpaca)  ; Elpaca package manager setup
+
 ;;; init.el ends here
