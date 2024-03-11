@@ -41,4 +41,7 @@
   (message (format "Emacs %s loaded from %s in %s"
             emacs-version user-emacs-directory (emacs-init-time))))
 
+;; FIXME: Temporarely set theme here
+(load-theme 'wombat t)
+
 ;;; init.el ends here

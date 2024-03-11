@@ -25,6 +25,9 @@
 (setq gc-cons-threshold most-positive-fixnum
       gc-cons-percentage 0.6)
 
+;; Setting the face here prevents flashes of color as the theme gets activated
+(push '(background-color . "#17191a") default-frame-alist)
+
 ;; Disable GUI elements (before they get a chance to be initialized)
 ;; NOTE: Disabling GUI elements this way does not trigger/queue an extra redraw
 ;; compared to using e.g. `(menu-bar-mode -1)' which can.
