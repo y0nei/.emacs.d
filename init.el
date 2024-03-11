@@ -69,5 +69,6 @@
 ;; Packages and configuration
 (require 'init-elpaca)  ; Elpaca package manager setup
 (require 'init-core)
+(require 'init-evil)
 
 ;;; init.el ends here
