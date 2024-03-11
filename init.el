@@ -24,7 +24,7 @@
 ;; Guardrail
 (when (< emacs-major-version 29)
   (user-error (concat "This Emacs configuration requires version 29 or newer,"
-                      (format " but version %s was detected." emacs-version))))
+                      " but version %s was detected.") emacs-version))
 
 ;;; Setup customization file
 ;; Offload custom-set-variables to a separate file to not clutter init.el
