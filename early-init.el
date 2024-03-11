@@ -35,6 +35,9 @@
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars) default-frame-alist)
 
+;; Disable the GNU Emacs welcome screen
+(setq inhibit-splash-screen t)
+
 ;; Resize by pixels instead of cols/rows.
 (setq-default window-resize-pixelwise t
               frame-resize-pixelwise t)
