@@ -22,7 +22,7 @@
 ;; is triggered and a low threshold is set. (more info at http://akrl.sdf.org/)
 (use-package gcmh
   :ensure t
-  :hook (window-setup . gcmh-mode)
+  :hook (elpaca-after-init . gcmh-mode)
   :init
   (setq gcmh-idle-delay 'auto  ; Default is 15s
         gcmh-auto-idle-delay-factor 10

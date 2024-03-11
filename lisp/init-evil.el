@@ -18,14 +18,14 @@
 
 (use-package evil
   :ensure t
-  ;; BUG: When setting the hook to `after-init', evil fails to load. Possible
-  ;; race condition with elpaca(?)
-  ;; :hook (elpaca-after-init . evil-mode)
-  :preface (setq evil-want-keybinding nil)
+  ;; BUG: Loading evil on a `after-init' hook, fails to load. Setting it to
+  ;; `elpaca-after-init' throws errors regarding general.el keybind definitions.
+  :init
+  (setq evil-want-keybinding nil)
+  (evil-mode)
   :config
   ;; TODO: Use `undo-fu' for undo system
-  (evil-set-undo-system 'undo-redo)
-  (evil-mode))
+  (evil-set-undo-system 'undo-redo))
 
 ;; Evil mode functionality for various other tools
 (use-package evil-collection
