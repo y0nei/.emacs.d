@@ -69,6 +69,11 @@
   "e v l" '(eval-last-sexp :wk "Evaluate elisp expression before point")
   "e v r" '(eval-region :wk "Evaluate elisp in region")
 
+  "f" '(:ignore t :wk "file")
+  "f r" '(recentf :wk "Find recent files")
+  "f c" '((lambda () (interactive) (find-file user-emacs-directory))
+          :wk "Open emacs init directory")
+
   "h" '(:ignore t :wk "help")
   "h f" '(describe-function :wk "Describe function")
   "h v" '(describe-variable :wk "Describe variable"))
