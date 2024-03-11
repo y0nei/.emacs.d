@@ -36,12 +36,25 @@
   (load custom-file nil t))
 
 ;;; Diagnostics
+
+;; Show useful information at startup
+(defun yni/display-startup-diagnostics ()
+  (message "Emacs %s loaded from %s in %s with %d garbage collections."
+           emacs-version user-emacs-directory
+           (format "%.3f seconds"
+                   (float-time
+                    (time-subtract after-init-time before-init-time)))
+           gcs-done))
+
+(add-hook 'emacs-startup-hook #'yni/display-startup-diagnostics)
+
 ;; Override startup minibuffer advertisement with something usefull
 ;; NOTE: Overriding this function ignores `inhibit-startup-echo-area-message'
 ;; and shows the message regardless if its disabled or not.
-(defun display-startup-echo-area-message ()
-  (message (format "Emacs %s loaded from %s in %s"
-            emacs-version user-emacs-directory (emacs-init-time))))
+;;
+;; (defun display-startup-echo-area-message ()
+;;   (message (format "Emacs %s loaded from %s in %s"
+;;             emacs-version user-emacs-directory (emacs-init-time))))
 
 ;; FIXME: Temporarely set theme here
 (load-theme 'wombat t)

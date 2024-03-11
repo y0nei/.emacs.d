@@ -37,8 +37,8 @@
 
 ;; Disable startup minibuffer advertisement entirely
 ;; https://yrh.dev/blog/rant-obfuscation-in-emacs/
-;; (put 'inhibit-startup-echo-area-message 'saved-value
-;;      (setq inhibit-startup-echo-area-message (user-login-name)))
+(put 'inhibit-startup-echo-area-message 'saved-value
+     (setq inhibit-startup-echo-area-message (user-login-name)))
 
 ;; Disable the GNU Emacs welcome screen
 (setq inhibit-splash-screen t)
