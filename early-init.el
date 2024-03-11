@@ -26,6 +26,8 @@
       gc-cons-percentage 0.6)
 
 ;; Disable GUI elements (before they get a chance to be initialized)
+;; NOTE: Disabling GUI elements this way does not trigger/queue an extra redraw
+;; compared to using e.g. `(menu-bar-mode -1)' which can.
 (push '(menu-bar-lines . 0) default-frame-alist)
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars) default-frame-alist)
