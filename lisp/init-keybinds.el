@@ -35,7 +35,7 @@
     :global-prefix "M-SPC"))
 
 ;; Since elpaca installs and activates packages asynchronously, we need to load
-;; general early, otherwise the :general keyword in `use-package' won’t work.
+;; general early, otherwise the :general keyword in `use-package' won't work.
 (elpaca-wait)
 
 ;;; Keybindings
