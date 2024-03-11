@@ -21,7 +21,8 @@
 ;; Prevent package.el loading packages prior to their init-file loading.
 (setq package-enable-at-startup nil)
 
-;; Defer garbage collection further back in the startup process
+;; Defer garbage collection further back in the startup process. Not resetting
+;; it later causes stuttering/freezes.
 (setq gc-cons-threshold most-positive-fixnum
       gc-cons-percentage 0.6)
 

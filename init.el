@@ -56,8 +56,9 @@
 ;;   (message (format "Emacs %s loaded from %s in %s"
 ;;             emacs-version user-emacs-directory (emacs-init-time))))
 
-;; Reset the garbage collection threshold set earlier to 50MB
-(setq gc-cons-threshold (* 50 1024 1024))  ; 0.76MB by default
+;; Reset the garbage collection threshold for early startup. Garbage collection
+;; is later managed by `gcmh' loaded in `init-core.el'.
+(setq gc-cons-threshold (* 128 1024 1024))  ; 128MB, 0.76MB by default
 
 ;; FIXME: Temporarely set theme here
 (load-theme 'wombat t)
@@ -67,5 +68,6 @@
 
 ;; Packages and configuration
 (require 'init-elpaca)  ; Elpaca package manager setup
+(require 'init-core)
 
 ;;; init.el ends here
