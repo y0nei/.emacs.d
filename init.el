@@ -37,6 +37,8 @@
 
 ;;; Diagnostics
 ;; Override startup minibuffer advertisement with something usefull
+;; NOTE: Overriding this function ignores `inhibit-startup-echo-area-message'
+;; and shows the message regardless if its disabled or not.
 (defun display-startup-echo-area-message ()
   (message (format "Emacs %s loaded from %s in %s"
             emacs-version user-emacs-directory (emacs-init-time))))
