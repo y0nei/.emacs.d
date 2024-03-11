@@ -5,6 +5,7 @@
 
 custom.el
 eln-cache/
+eshell/
 auto-save-list/
 recentf
 # Elpa and Elpaca packages
