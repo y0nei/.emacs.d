@@ -56,6 +56,9 @@
 ;;   (message (format "Emacs %s loaded from %s in %s"
 ;;             emacs-version user-emacs-directory (emacs-init-time))))
 
+;; Reset the garbage collection threshold set earlier to 50MB
+(setq gc-cons-threshold (* 50 1024 1024))  ; 0.76MB by default
+
 ;; FIXME: Temporarely set theme here
 (load-theme 'wombat t)
 
