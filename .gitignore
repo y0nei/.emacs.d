@@ -8,6 +8,7 @@ eln-cache/
 eshell/
 auto-save-list/
 recentf
+savehist
 # Elpa and Elpaca packages
 elpa*/
 # Emacs-W3
