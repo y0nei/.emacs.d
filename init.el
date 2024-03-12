@@ -73,4 +73,6 @@
 (require 'init-evil)
 (require 'init-keybinds)
 
+(require 'init-dired)
+
 ;;; init.el ends here
