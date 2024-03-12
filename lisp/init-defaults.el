@@ -48,7 +48,7 @@
 ;; Remember pointer position in previously visited files
 (use-package saveplace
   :config
-  (setq savehist-file (expand-file-name "savehist" user-emacs-directory))
+  (setq save-place-file (expand-file-name "savehist" user-emacs-directory))
   (save-place-mode))
 
 ;; Preserve point position when scrolling
