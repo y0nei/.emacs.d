@@ -63,6 +63,9 @@
 ;; FIXME: Temporarely set theme here
 (load-theme 'wombat t)
 
+;; Either `diff-hl' or `git-gutter'
+(defvar version-control-diff-tool 'git-gutter)
+
 ;;; Load libraries
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -74,5 +77,6 @@
 (require 'init-keybinds)
 
 (require 'init-dired)
+(require 'init-git)
 
 ;;; init.el ends here
