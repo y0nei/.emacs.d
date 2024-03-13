@@ -58,12 +58,12 @@
 ;; Modeline
 (use-package doom-modeline
   :ensure t
-  :hook (after-init . doom-modeline-mode)
-  :config
+  :hook ((doom-modeline-mode . column-number-mode)
+         (doom-modeline-mode . display-battery-mode)
+         ((elpaca-after-init-hook after-init) . doom-modeline-mode))
+  :init
   (setq doom-modeline-buffer-file-name-style 'truncate-nil
-        doom-modeline-total-line-number t)
-  (display-battery-mode 1)
-  (column-number-mode 1))
+        doom-modeline-total-line-number t))
 
 ;; Hide the modeline in some modes
 ;; (use-package hide-mode-line
