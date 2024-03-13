@@ -76,6 +76,7 @@
 (require 'init-evil)
 (require 'init-keybinds)
 
+(require 'init-ui)
 (require 'init-dired)
 (require 'init-git)
 
