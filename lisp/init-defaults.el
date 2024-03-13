@@ -93,6 +93,14 @@
 ;; Write over selected text on input
 (delete-selection-mode t)
 
+;; Line numbers configuration
+(use-package display-line-numbers
+  :hook (prog-mode . display-line-numbers-mode)
+  :config
+  (setq display-line-numbers-type 'relative)
+  ;; Easilly distinguish the current line number by giving it a nice color.
+  (set-face-foreground 'line-number-current-line "#F0C674"))
+
 (provide 'init-defaults)
 
 ;; init-defaults.el ends here
