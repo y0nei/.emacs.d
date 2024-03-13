@@ -34,7 +34,7 @@
   :if (eq version-control-diff-tool 'git-gutter)
   :ensure t
   :config
-  ;; Taken from `git-gutter+.el` and modified to work with `git-gutter.el`.
+  ;; Taken from `git-gutter+.el' and modified to work with `git-gutter.el'.
   (defun yn/git-gutter-popup-hunk-inline ()
     "Show hunk by temporarily expanding it at point"
     (interactive)
