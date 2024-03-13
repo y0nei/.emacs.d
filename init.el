@@ -60,9 +60,6 @@
 ;; is later managed by `gcmh' loaded in `init-core.el'.
 (setq gc-cons-threshold (* 128 1024 1024))  ; 128MB, 0.76MB by default
 
-;; FIXME: Temporarely set theme here
-(load-theme 'wombat t)
-
 ;; Either `diff-hl' or `git-gutter'
 (defvar version-control-diff-tool 'git-gutter)
 
