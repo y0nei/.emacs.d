@@ -60,7 +60,7 @@
   :ensure t
   :hook ((doom-modeline-mode . column-number-mode)
          (doom-modeline-mode . display-battery-mode)
-         ((elpaca-after-init-hook after-init) . doom-modeline-mode))
+         (elpaca-after-init . doom-modeline-mode))
   :init
   (setq doom-modeline-buffer-file-name-style 'truncate-nil
         doom-modeline-total-line-number t))
