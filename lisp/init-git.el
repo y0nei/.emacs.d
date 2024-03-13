@@ -29,6 +29,15 @@
     "g" '(:ignore t :wk "git")
     "g s" '(magit-status :wk "Git status in Magit")))
 
+;; Highlight changes for Dired
+(use-package dired-k
+  :ensure t
+  :hook ((dired-initial-position . dired-k)
+         (dired-after-readin . dired-k-no-revert))
+  :config
+  (setq dired-k-padding 1
+        dired-k-human-readable t))
+
 ;; Highlight changes
 (use-package git-gutter
   :if (eq version-control-diff-tool 'git-gutter)
