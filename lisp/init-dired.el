@@ -18,7 +18,7 @@
 
 (use-package dired
   :config
-  (setq dired-listing-switches "-alh --group-directories-first"))
+  (setq dired-listing-switches "-alh -v --group-directories-first"))
 
 ;; Colorize dired buffers.
 (use-package diredfl
