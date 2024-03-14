@@ -23,11 +23,15 @@
 (use-package gcmh
   :ensure t
   :hook (elpaca-after-init . gcmh-mode)
-  :init
-  (setq gcmh-idle-delay 'auto  ; Default is 15s
-        gcmh-auto-idle-delay-factor 10
-        gcmh-verbose nil  ; Set to t for a log per each collection
-        gcmh-high-cons-threshold (* 16 1024 1024)))  ; 16MB
+  :custom
+  (gcmh-idle-delay 10)  ; Default is 15s, setting to auto triggers it too often
+  (gcmh-auto-idle-delay-factor 10)
+  (gcmh-verbose nil)  ; Set to t for a log per each collection
+  ;; 1GB by default is probably too high. Set it to 256MB on 64bit systems
+  ;; or 16MB on 32bit ones.
+  (gcmh-high-cons-threshold (* 1024 1024 (if (string-suffix-p
+                                              "64" (symbol-name
+                                                    sys/arch)) 256 16))))
 
 (provide 'init-core)
 
