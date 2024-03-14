@@ -22,6 +22,8 @@
   (eglot-highlight-symbol-face ((t (:underline t :weight bold)))) 
   :hook ((python-mode emacs-lisp-mode) . eglot-ensure)
   :config
+  ;; Perf boost, don't log every event
+  (fset #'jsonrpc--log-event #'ignore)
   (defun yn/eglot-reconnect ()
     "Helper function to reconnect to an eglot server interactively."
     (interactive)
