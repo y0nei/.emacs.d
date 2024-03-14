@@ -51,6 +51,8 @@
 
 ;; Either `diff-hl' or `git-gutter'
 (defvar version-control-diff-tool 'git-gutter)
+(defconst sys/arch (intern (car (split-string system-configuration "-")))
+  "The system's architecture. Returns a symbol like `x86_64', `aarch64', ...")
 
 ;;; Load libraries
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
