@@ -26,15 +26,6 @@
   (user-error (concat "This Emacs configuration requires version 29 or newer,"
                       " but version %s was detected.") emacs-version))
 
-;; Setup customization file
-(use-package custom
-  :config
-  ;; Offload custom-set-variables to a separate file to not clutter init.el
-  (setq-default custom-file (expand-file-name "custom.el" user-emacs-directory))
-  ;; NOTE: The file gets automatically created so no need to `write-region' it
-  (when (file-exists-p custom-file)
-    (load custom-file nil t)))
-
 ;; Show useful information at startup
 (defun yni/display-startup-diagnostics ()
   (message "Emacs %s loaded from %s in %s with %d garbage collections."

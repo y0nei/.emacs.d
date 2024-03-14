@@ -17,6 +17,15 @@
 ;;
 ;;; Code:
 
+;; Setup customization file
+(use-package custom
+  :config
+  ;; Offload custom-set-variables to a separate file to not clutter init.el
+  (setq-default custom-file (expand-file-name "custom.el" user-emacs-directory))
+  ;; NOTE: The file gets automatically created so no need to `write-region' it
+  (when (file-exists-p custom-file)
+    (load custom-file nil t)))
+
 ;; Enforce a sneaky Garbage Collection strategy to minimize GC interference with
 ;; user activity. During normal use a high GC threshold is set. When idling GC
 ;; is triggered and a low threshold is set. (more info at http://akrl.sdf.org/)
