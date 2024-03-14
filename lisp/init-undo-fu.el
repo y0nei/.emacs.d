@@ -25,7 +25,7 @@
   :general
   (:states '(normal)
    "u" 'undo-fu-only-undo
-   "\C-r" 'undo-fu-onlu-redo))
+   "\C-r" 'undo-fu-only-redo))
 
 ;; Persistent undo/redo
 (use-package undo-fu-session
