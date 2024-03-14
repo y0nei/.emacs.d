@@ -72,6 +72,7 @@
 (require 'init-defaults)
 (require 'init-evil)
 (require 'init-keybinds)
+(require 'init-undo-fu)
 
 (require 'init-ui)
 (require 'init-dired)

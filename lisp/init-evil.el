@@ -22,10 +22,7 @@
   ;; `elpaca-after-init' throws errors regarding general.el keybind definitions.
   :init
   (setq evil-want-keybinding nil)
-  (evil-mode)
-  :config
-  ;; TODO: Use `undo-fu' for undo system
-  (evil-set-undo-system 'undo-redo))
+  (evil-mode))
 
 ;; Evil mode functionality for various other tools
 (use-package evil-collection
