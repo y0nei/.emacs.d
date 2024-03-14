@@ -77,5 +77,6 @@
 (require 'init-ui)
 (require 'init-dired)
 (require 'init-git)
+(require 'init-helpful)
 
 ;;; init.el ends here
