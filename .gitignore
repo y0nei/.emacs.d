@@ -5,6 +5,8 @@
 
 custom.el
 eln-cache/
+.cache/
+history
 eshell/
 auto-save-list/
 transient/
