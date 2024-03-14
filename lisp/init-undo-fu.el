@@ -19,7 +19,6 @@
 
 (use-package undo-fu
   :ensure t
-  :after evil
   :config
   (setq evil-undo-system 'undo-fu)
   :general
@@ -31,10 +30,10 @@
 (use-package undo-fu-session
   :ensure t
   :after undo-fu
+  :hook (elpaca-after-init . undo-fu-session-global-mode)
   :config
   (setq undo-fu-session-incompatible-files
-        '("/COMMIT_EDITMSG\\'" "/git-rebase-todo\\'"))
-  (undo-fu-session-global-mode))
+        '("/COMMIT_EDITMSG\\'" "/git-rebase-todo\\'")))
 
 (provide 'init-undo-fu)
 
