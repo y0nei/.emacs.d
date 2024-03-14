@@ -49,7 +49,7 @@
 ;; is later managed by `gcmh' loaded in `init-core.el'.
 (setq gc-cons-threshold (* 128 1024 1024))  ; 128MB, 0.76MB by default
 
-(defvar version-control-diff-tool 'git-gutter
+(defvar version-control-diff-tool 'diff-hl
   "Tool used to display diff indicators. Either `diff-hl' or `git-gutter'.")
 (defconst sys/arch (intern (car (split-string system-configuration "-")))
   "The system's architecture. Returns a symbol like `x86_64', `aarch64', ...")
