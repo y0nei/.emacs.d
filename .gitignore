@@ -8,6 +8,8 @@ eln-cache/
 eshell/
 auto-save-list/
 transient/
+tramp
+undo-fu-session/
 recentf
 savehist
 # Elpa and Elpaca packages
