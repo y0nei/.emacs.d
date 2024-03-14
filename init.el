@@ -79,6 +79,7 @@
 (require 'init-git)
 (require 'init-helpful)
 
+(require 'init-programming)
 (require 'init-lang-elisp)
 
 ;;; init.el ends here
