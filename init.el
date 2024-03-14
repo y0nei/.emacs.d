@@ -69,6 +69,7 @@
 (require 'init-dired)
 (require 'init-git)
 (require 'init-helpful)
+(require 'init-treemacs)
 
 (require 'init-eglot)
 (require 'init-completion-minibuffer)
