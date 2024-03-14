@@ -80,6 +80,9 @@
 (require 'init-helpful)
 
 (require 'init-eglot)
+(require 'init-completion-minibuffer)
+(require 'init-completion-at-point)
+
 (require 'init-programming)
 (require 'init-lang-elisp)
 
