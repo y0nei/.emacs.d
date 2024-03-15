@@ -29,7 +29,10 @@
   :general
   (yni/leader-keys
     "t" '(:ignore t :wk "toggle")
-    "t e" '(treemacs :wk "Open treemacs")))
+    "t e" '(treemacs :wk "Open treemacs"))
+  (:keymaps 'treemacs-mode-map
+   :states 'normal
+   (kbd "C-v") 'treemacs-visit-node-horizontal-split))
 
 (use-package treemacs-nerd-icons
   :ensure t
